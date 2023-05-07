@@ -1,4 +1,0 @@
-[console_scripts]
-helloworld_publisher = topic_helloworld.helloworld_publisher:main
-helloworld_subscriber = topic_helloworld.helloworld_subscriber:main
-
