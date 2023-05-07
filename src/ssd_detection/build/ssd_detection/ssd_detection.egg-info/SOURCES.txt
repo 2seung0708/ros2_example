@@ -1,0 +1,14 @@
+package.xml
+setup.cfg
+setup.py
+resource/ssd_detection
+ssd_detection/__init__.py
+ssd_detection/misc.py
+ssd_detection/ssd_detection.py
+ssd_detection.egg-info/PKG-INFO
+ssd_detection.egg-info/SOURCES.txt
+ssd_detection.egg-info/dependency_links.txt
+ssd_detection.egg-info/entry_points.txt
+ssd_detection.egg-info/requires.txt
+ssd_detection.egg-info/top_level.txt
+ssd_detection.egg-info/zip-safe

@@ -1,0 +1,3 @@
+[console_scripts]
+detection_example = ssd_detection.ssd_detection:main
+

@@ -1,0 +1,25 @@
+[0.431s] Invoking command in '/home/shlee/ros2_ws/src/ssd_detection/build/ssd_detection': PYTHONPATH=/home/shlee/ros2_ws/src/ssd_detection/build/ssd_detection/prefix_override:/home/shlee/ros2_ws/src/ssd_detection/install/ssd_detection/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/shlee/ros2_ws/src/ssd_detection/build/ssd_detection/build --no-deps install_data
+[0.562s] running develop
+[0.629s] running egg_info
+[0.629s] creating ssd_detection.egg-info
+[0.629s] writing ssd_detection.egg-info/PKG-INFO
+[0.629s] writing dependency_links to ssd_detection.egg-info/dependency_links.txt
+[0.629s] writing entry points to ssd_detection.egg-info/entry_points.txt
+[0.629s] writing requirements to ssd_detection.egg-info/requires.txt
+[0.629s] writing top-level names to ssd_detection.egg-info/top_level.txt
+[0.630s] writing manifest file 'ssd_detection.egg-info/SOURCES.txt'
+[0.650s] reading manifest file 'ssd_detection.egg-info/SOURCES.txt'
+[0.651s] writing manifest file 'ssd_detection.egg-info/SOURCES.txt'
+[0.671s] running build_ext
+[0.672s] Creating /home/shlee/ros2_ws/src/ssd_detection/install/ssd_detection/lib/python3.8/site-packages/site.py
+[0.673s] Creating /home/shlee/ros2_ws/src/ssd_detection/install/ssd_detection/lib/python3.8/site-packages/ssd-detection.egg-link (link to .)
+[0.674s] Installing detection_example script to /home/shlee/ros2_ws/src/ssd_detection/install/ssd_detection/lib/ssd_detection
+[0.674s] 
+[0.674s] Installed /home/shlee/ros2_ws/src/ssd_detection/build/ssd_detection
+[0.674s] running install_data
+[0.675s] creating /home/shlee/ros2_ws/src/ssd_detection/install/ssd_detection/share/ament_index
+[0.675s] creating /home/shlee/ros2_ws/src/ssd_detection/install/ssd_detection/share/ament_index/resource_index
+[0.675s] creating /home/shlee/ros2_ws/src/ssd_detection/install/ssd_detection/share/ament_index/resource_index/packages
+[0.675s] copying resource/ssd_detection -> /home/shlee/ros2_ws/src/ssd_detection/install/ssd_detection/share/ament_index/resource_index/packages
+[0.675s] copying package.xml -> /home/shlee/ros2_ws/src/ssd_detection/install/ssd_detection/share/ssd_detection
+[0.694s] Invoked command in '/home/shlee/ros2_ws/src/ssd_detection/build/ssd_detection' returned '0': PYTHONPATH=/home/shlee/ros2_ws/src/ssd_detection/build/ssd_detection/prefix_override:/home/shlee/ros2_ws/src/ssd_detection/install/ssd_detection/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/shlee/ros2_ws/src/ssd_detection/build/ssd_detection/build --no-deps install_data

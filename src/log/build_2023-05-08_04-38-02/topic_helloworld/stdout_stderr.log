@@ -1,0 +1,16 @@
+running develop
+running egg_info
+writing topic_helloworld.egg-info/PKG-INFO
+writing dependency_links to topic_helloworld.egg-info/dependency_links.txt
+writing entry points to topic_helloworld.egg-info/entry_points.txt
+writing requirements to topic_helloworld.egg-info/requires.txt
+writing top-level names to topic_helloworld.egg-info/top_level.txt
+reading manifest file 'topic_helloworld.egg-info/SOURCES.txt'
+writing manifest file 'topic_helloworld.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/shlee/ros2_ws/src/install/topic_helloworld/lib/python3.8/site-packages/topic-helloworld.egg-link (link to .)
+Installing helloworld_publisher script to /home/shlee/ros2_ws/src/install/topic_helloworld/lib/topic_helloworld
+Installing helloworld_subscriber script to /home/shlee/ros2_ws/src/install/topic_helloworld/lib/topic_helloworld
+
+Installed /home/shlee/ros2_ws/src/build/topic_helloworld
+running install_data

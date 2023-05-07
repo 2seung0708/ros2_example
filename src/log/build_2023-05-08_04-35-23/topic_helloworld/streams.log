@@ -1,0 +1,24 @@
+[0.385s] Invoking command in '/home/shlee/ros2_ws/src/build/topic_helloworld': PYTHONPATH=/home/shlee/ros2_ws/src/build/topic_helloworld/prefix_override:/home/shlee/ros2_ws/src/install/topic_helloworld/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/shlee/ros2_ws/src/build/topic_helloworld/build --no-deps install_data
+[0.519s] running develop
+[0.592s] running egg_info
+[0.592s] creating topic_helloworld.egg-info
+[0.592s] writing topic_helloworld.egg-info/PKG-INFO
+[0.592s] writing dependency_links to topic_helloworld.egg-info/dependency_links.txt
+[0.592s] writing entry points to topic_helloworld.egg-info/entry_points.txt
+[0.593s] writing requirements to topic_helloworld.egg-info/requires.txt
+[0.593s] writing top-level names to topic_helloworld.egg-info/top_level.txt
+[0.593s] writing manifest file 'topic_helloworld.egg-info/SOURCES.txt'
+[0.615s] reading manifest file 'topic_helloworld.egg-info/SOURCES.txt'
+[0.615s] writing manifest file 'topic_helloworld.egg-info/SOURCES.txt'
+[0.637s] running build_ext
+[0.637s] Creating /home/shlee/ros2_ws/src/install/topic_helloworld/lib/python3.8/site-packages/site.py
+[0.638s] Creating /home/shlee/ros2_ws/src/install/topic_helloworld/lib/python3.8/site-packages/topic-helloworld.egg-link (link to .)
+[0.639s] 
+[0.639s] Installed /home/shlee/ros2_ws/src/build/topic_helloworld
+[0.639s] running install_data
+[0.639s] creating /home/shlee/ros2_ws/src/install/topic_helloworld/share/ament_index
+[0.639s] creating /home/shlee/ros2_ws/src/install/topic_helloworld/share/ament_index/resource_index
+[0.639s] creating /home/shlee/ros2_ws/src/install/topic_helloworld/share/ament_index/resource_index/packages
+[0.639s] copying resource/topic_helloworld -> /home/shlee/ros2_ws/src/install/topic_helloworld/share/ament_index/resource_index/packages
+[0.639s] copying package.xml -> /home/shlee/ros2_ws/src/install/topic_helloworld/share/topic_helloworld
+[0.658s] Invoked command in '/home/shlee/ros2_ws/src/build/topic_helloworld' returned '0': PYTHONPATH=/home/shlee/ros2_ws/src/build/topic_helloworld/prefix_override:/home/shlee/ros2_ws/src/install/topic_helloworld/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/shlee/ros2_ws/src/build/topic_helloworld/build --no-deps install_data
