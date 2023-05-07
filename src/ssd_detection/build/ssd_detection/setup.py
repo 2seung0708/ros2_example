@@ -1,1 +1,0 @@
-/home/shlee/ros2_ws/src/ssd_detection/setup.py
