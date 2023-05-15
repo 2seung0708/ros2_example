@@ -39,15 +39,26 @@ class DetectionNode(Node):
         
         ###======================= SSD 설정 부분 =======================
         # Step 1: Initialize model with the best available weights
+        self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu") ## Device 사용 가능한지 확인
+        self.get_logger().info("Device: %s "%(self.device)) ## device 정보 확인
         self.weights = SSDLite320_MobileNet_V3_Large_Weights.COCO_V1 ## mobilenet을 backbone으로 하는 사전학습 모델 불러오기
-        self.net = ssdlite320_mobilenet_v3_large(weights=self.weights, box_score_thresh=0.9).cuda() ## SSD_mobilenet 모델 선언후 GPU로 올리기
+        #=====
+        # ## ver1. torchvision의 checkpoint 이용
+        # self.net = ssdlite320_mobilenet_v3_large(weights=self.weights, score_thresh=0.5).cuda() ## SSD_mobilenet 모델 선언후 GPU로 올리기
+        ## ver2. custom checkpoint 이용
+        self.ckpoint = torch.load("./src/ssd_detection/SSD_CkPoint.pth") ## 체크포인트 경로 지정
+        self.net = self.ckpoint['model'].cuda() ## SSD_mobilenet 모델 선언후 GPU로 올리기
+        #=====        
         self.net.eval() ## 평가모드로 설정
 
         # Step 2: Initialize the inference transforms
         self.preprocess = self.weights.transforms() ## transform 정보 받아오기
-        self.class_names = self.weights.meta["categories"] ## 카테고리 정보 받아오기(COCO데이터셋)
-        self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu") ## Device 사용 가능한지 확인
-        self.get_logger().info("Device: %s "%(self.device)) ## device 정보 확인
+        #=====
+        # ## ver1. torchvision의 checkpoint 이용
+        # self.class_names = self.weights.meta["categories"] ## 카테고리 정보 받아오기(COCO데이터셋)
+        ## ver2. custom checkpoint 이용
+        ssd_detection.category_list = checkpoints_dict['category_list']
+        #=====
         ###=============================================================
         
         self.timer = Timer()
@@ -70,8 +81,6 @@ class DetectionNode(Node):
 
         # Step 4: Use the model and visualize the prediction
         self.timer.start() ## inference 속도 측정 시작
-
-        threshold = 0.7 ## 박스 시각화 할 기준
         
         images = image.unsqueeze(0)
         images = images.to(self.device) ## GPU 혹은 CPU로
@@ -79,9 +88,7 @@ class DetectionNode(Node):
         with torch.no_grad():
             pred = self.net(images)[0] ## SSD 모델의 성능 확인
         
-        over_threshold = pred["scores"]>threshold
-        # boxes, probs, labels = pred["boxes"][over_threshold].cpu(), pred["scores"][over_threshold].cpu(), pred["labels"][over_threshold].cpu()
-        boxes, probs, labels = pred["boxes"][over_threshold], pred["scores"][over_threshold], pred["labels"][over_threshold]
+        boxes, probs, labels = pred["boxes"], pred["scores"], pred["labels"]
         interval = self.timer.end()
         print('Time: {:.2f}s, Detect Objects: {:d}.'.format(interval, labels.size(0))) ## inference에 소요된 시간과 box 개수 출력
         ###=============================================================
