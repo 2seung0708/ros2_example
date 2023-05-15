@@ -57,7 +57,7 @@ class DetectionNode(Node):
         # ## ver1. torchvision의 checkpoint 이용
         # self.class_names = self.weights.meta["categories"] ## 카테고리 정보 받아오기(COCO데이터셋)
         ## ver2. custom checkpoint 이용
-        ssd_detection.category_list = checkpoints_dict['category_list']
+        self.class_names = checkpoints_dict['category_list']
         #=====
         ###=============================================================
         
