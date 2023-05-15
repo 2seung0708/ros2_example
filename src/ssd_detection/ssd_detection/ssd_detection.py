@@ -46,7 +46,7 @@ class DetectionNode(Node):
         # ## ver1. torchvision의 checkpoint 이용
         # self.net = ssdlite320_mobilenet_v3_large(weights=self.weights, score_thresh=0.5).cuda() ## SSD_mobilenet 모델 선언후 GPU로 올리기
         ## ver2. custom checkpoint 이용
-        self.ckpoint = torch.load("./src/ssd_detection/SSD_CkPoint.pth") ## 체크포인트 경로 지정
+        self.ckpoint = torch.load("./src/ssd_detection/COCO_CheckPoint.pth") ## 체크포인트 경로 지정
         self.net = self.ckpoint['model'].cuda() ## SSD_mobilenet 모델 선언후 GPU로 올리기
         #=====        
         self.net.eval() ## 평가모드로 설정
